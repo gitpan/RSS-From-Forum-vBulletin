@@ -3,7 +3,7 @@
 # workaround for dzil
 package get_rss_from_forum;
 
-our $VERSION = '0.02'; # VERSION
+our $VERSION = '0.03'; # VERSION
 
 use 5.010;
 use strict;
@@ -24,7 +24,7 @@ get_rss_from_forum - Get RSS from vBulletin forum
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 

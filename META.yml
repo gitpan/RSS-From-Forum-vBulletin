@@ -14,8 +14,10 @@ meta-spec:
   version: 1.4
 name: RSS-From-Forum-vBulletin
 requires:
+  Date::Parse: 0
   Exporter::Lite: 0
   LWP::UserAgent: 0
+  Log::Any: 0
   Mojo::DOM: 0
   Test::More: 0.96
   URI::URL: 0
@@ -23,4 +25,4 @@ requires:
 resources:
   homepage: http://search.cpan.org/dist/RSS-From-Forum-vBulletin/
   repository: http://github.com/sharyanto/perl-RSS-From-Forum-vBulletin
-version: 0.02
+version: 0.03
