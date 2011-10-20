@@ -1,0 +1,48 @@
+NAME
+    RSS::From::Forum::vBulletin - Generate Indonesian monthly HTML calendar
+
+VERSION
+    version 0.01
+
+SYNOPSIS
+     # See get-rss-from-forum for command-line usage
+
+DESCRIPTION
+FUNCTIONS
+    None are exported, but they are exportable.
+
+  get_rss_from_forum(%args) -> [STATUS_CODE, ERR_MSG, RESULT]
+    Generate an RSS page by parsing vBulletin forum display page.
+
+    Many vBulletin forums do not turn on RSS feeds. This function parses
+    vBulletin forum display page and create a simple RSS page so you can
+    subscribe to it using RSS.
+
+    Returns a 3-element arrayref. STATUS_CODE is 200 on success, or an error
+    code between 3xx-5xx (just like in HTTP). ERR_MSG is a string containing
+    error message, RESULT is the actual result.
+
+    Arguments ("*" denotes required arguments):
+
+    *   url* => *str*
+
+        Forum URL (the forum display page).
+
+        Usually it's of the form: http://host/path/forumdisplay.php?f=XXX
+
+    *   ua => *obj*
+
+        Supply a custom LWP::UserAgent object.
+
+        If supplied, will be used instead of the default LWP::UserAgent
+        object.
+
+AUTHOR
+    Steven Haryanto <stevenharyanto@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2011 by Steven Haryanto.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
