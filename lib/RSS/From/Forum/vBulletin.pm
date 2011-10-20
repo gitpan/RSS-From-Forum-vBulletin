@@ -11,7 +11,7 @@ use URI::URL;
 use Exporter::Lite;
 our @EXPORT_OK = qw(get_rss_from_forum);
 
-our $VERSION = '0.01'; # VERSION
+our $VERSION = '0.02'; # VERSION
 
 our %SPEC;
 
@@ -88,8 +88,6 @@ sub get_rss_from_forum {
     # find all table rows containing show thread url
     my $rows = $dom->find("tr");
     for my $row (@$rows) {
-        #my $a = $row->find(qq{a[href*="showthread.php"});
-        print "D:row\n";
         my $a = $row->find(qq{a[href*="showthread.php"]});
         next unless @$a;
         push @rss, "<item>\n";
@@ -120,7 +118,7 @@ RSS::From::Forum::vBulletin - Generate Indonesian monthly HTML calendar
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
