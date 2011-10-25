@@ -1,8 +1,9 @@
 NAME
-    RSS::From::Forum::vBulletin - Generate Indonesian monthly HTML calendar
+    RSS::From::Forum::vBulletin - Get RSS page by parsing vBulletin forum
+    display page
 
 VERSION
-    version 0.03
+    version 0.04
 
 SYNOPSIS
      # See get-rss-from-forum for command-line usage

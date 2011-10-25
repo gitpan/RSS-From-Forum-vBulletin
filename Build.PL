@@ -12,12 +12,12 @@ my %module_build_args = (
   'configure_requires' => {
     'Module::Build' => '0.3601'
   },
-  'dist_abstract' => 'Generate Indonesian monthly HTML calendar',
+  'dist_abstract' => 'Get RSS page by parsing vBulletin forum display page',
   'dist_author' => [
     'Steven Haryanto <stevenharyanto@gmail.com>'
   ],
   'dist_name' => 'RSS-From-Forum-vBulletin',
-  'dist_version' => '0.03',
+  'dist_version' => '0.04',
   'license' => 'perl',
   'module_name' => 'RSS::From::Forum::vBulletin',
   'recommends' => {},
@@ -28,6 +28,7 @@ my %module_build_args = (
     'LWP::UserAgent' => '0',
     'Log::Any' => '0',
     'Mojo::DOM' => '0',
+    'Sub::Spec::CmdLine' => '0',
     'Test::More' => '0.96',
     'URI::URL' => '0',
     'perl' => '5.010000'

@@ -14,7 +14,7 @@ use URI::URL;
 use Exporter::Lite;
 our @EXPORT_OK = qw(get_rss_from_forum);
 
-our $VERSION = '0.03'; # VERSION
+our $VERSION = '0.04'; # VERSION
 
 our %SPEC;
 
@@ -140,18 +140,18 @@ sub get_rss_from_forum {
 }
 
 1;
-#ABSTRACT: Generate Indonesian monthly HTML calendar
+#ABSTRACT: Get RSS page by parsing vBulletin forum display page
 
 
 =pod
 
 =head1 NAME
 
-RSS::From::Forum::vBulletin - Generate Indonesian monthly HTML calendar
+RSS::From::Forum::vBulletin - Get RSS page by parsing vBulletin forum display page
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 

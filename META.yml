@@ -1,5 +1,5 @@
 ---
-abstract: 'Generate Indonesian monthly HTML calendar'
+abstract: 'Get RSS page by parsing vBulletin forum display page'
 author:
   - 'Steven Haryanto <stevenharyanto@gmail.com>'
 build_requires:
@@ -19,10 +19,11 @@ requires:
   LWP::UserAgent: 0
   Log::Any: 0
   Mojo::DOM: 0
+  Sub::Spec::CmdLine: 0
   Test::More: 0.96
   URI::URL: 0
   perl: 5.010000
 resources:
   homepage: http://search.cpan.org/dist/RSS-From-Forum-vBulletin/
   repository: http://github.com/sharyanto/perl-RSS-From-Forum-vBulletin
-version: 0.03
+version: 0.04
