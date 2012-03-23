@@ -3,14 +3,15 @@
 # workaround for dzil
 package get_rss_from_forum;
 
-our $VERSION = '0.04'; # VERSION
+our $VERSION = '0.05'; # VERSION
 
 use 5.010;
 use strict;
 use warnings;
 
-use Sub::Spec::CmdLine qw(run);
-run(module => 'RSS::From::Forum::vBulletin', sub=>'get_rss_from_forum');
+use Perinci::CmdLine;
+Perinci::CmdLine->new(
+    url => '/RSS/From/Forum/vBulletin/get_rss_from_forum')->run;
 
 1;
 # ABSTRACT: Get RSS from vBulletin forum
@@ -24,7 +25,7 @@ get_rss_from_forum - Get RSS from vBulletin forum
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 
@@ -61,7 +62,7 @@ Steven Haryanto <stevenharyanto@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Steven Haryanto.
+This software is copyright (c) 2012 by Steven Haryanto.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

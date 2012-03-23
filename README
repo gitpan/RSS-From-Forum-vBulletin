@@ -3,7 +3,7 @@ NAME
     display page
 
 VERSION
-    version 0.04
+    version 0.05
 
 SYNOPSIS
      # See get-rss-from-forum for command-line usage
@@ -12,24 +12,15 @@ DESCRIPTION
 FUNCTIONS
     None are exported, but they are exportable.
 
-  get_rss_from_forum(%args) -> [STATUS_CODE, ERR_MSG, RESULT]
+FUNCTIONS
+  get_rss_from_forum(%args) -> [status, msg, result, meta]
     Generate an RSS page by parsing vBulletin forum display page.
 
     Many vBulletin forums do not turn on RSS feeds. This function parses
     vBulletin forum display page and create a simple RSS page so you can
     subscribe to it using RSS.
 
-    Returns a 3-element arrayref. STATUS_CODE is 200 on success, or an error
-    code between 3xx-5xx (just like in HTTP). ERR_MSG is a string containing
-    error message, RESULT is the actual result.
-
-    Arguments ("*" denotes required arguments):
-
-    *   url* => *str*
-
-        Forum URL (the forum display page).
-
-        Usually it's of the form: http://host/path/forumdisplay.php?f=XXX
+    Arguments ('*' denotes required arguments):
 
     *   ua => *obj*
 
@@ -38,11 +29,26 @@ FUNCTIONS
         If supplied, will be used instead of the default LWP::UserAgent
         object.
 
+    *   url* => *str*
+
+        Forum URL (the forum display page).
+
+        Usually it's of the form: http://host/path/forumdisplay.php?f=XXX
+
+    Return value:
+
+    Returns an enveloped result (an array). First element (status) is an
+    integer containing HTTP status code (200 means OK, 4xx caller error, 5xx
+    function error). Second element (msg) is a string containing error
+    message, or 'OK' if status is 200. Third element (result) is optional,
+    the actual result. Fourth element (meta) is called result metadata and
+    is optional, a hash that contains extra information.
+
 AUTHOR
     Steven Haryanto <stevenharyanto@gmail.com>
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2011 by Steven Haryanto.
+    This software is copyright (c) 2012 by Steven Haryanto.
 
     This is free software; you can redistribute it and/or modify it under
     the same terms as the Perl 5 programming language system itself.

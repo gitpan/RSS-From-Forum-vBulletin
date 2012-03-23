@@ -14,7 +14,7 @@ use URI::URL;
 use Exporter::Lite;
 our @EXPORT_OK = qw(get_rss_from_forum);
 
-our $VERSION = '0.04'; # VERSION
+our $VERSION = '0.05'; # VERSION
 
 our %SPEC;
 
@@ -151,7 +151,7 @@ RSS::From::Forum::vBulletin - Get RSS page by parsing vBulletin forum display pa
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 
@@ -163,8 +163,10 @@ version 0.04
 
 None are exported, but they are exportable.
 
-=head2 get_rss_from_forum(%args) -> [STATUS_CODE, ERR_MSG, RESULT]
+=head1 FUNCTIONS
 
+
+=head2 get_rss_from_forum(%args) -> [status, msg, result, meta]
 
 Generate an RSS page by parsing vBulletin forum display page.
 
@@ -172,19 +174,9 @@ Many vBulletin forums do not turn on RSS feeds. This function parses vBulletin
 forum display page and create a simple RSS page so you can subscribe to it using
 RSS.
 
-Returns a 3-element arrayref. STATUS_CODE is 200 on success, or an error code
-between 3xx-5xx (just like in HTTP). ERR_MSG is a string containing error
-message, RESULT is the actual result.
-
-Arguments (C<*> denotes required arguments):
+Arguments ('*' denotes required arguments):
 
 =over 4
-
-=item * B<url>* => I<str>
-
-Forum URL (the forum display page).
-
-Usually it's of the form: http://host/path/forumdisplay.php?f=XXX
 
 =item * B<ua> => I<obj>
 
@@ -192,7 +184,17 @@ Supply a custom LWP::UserAgent object.
 
 If supplied, will be used instead of the default LWP::UserAgent object.
 
+=item * B<url>* => I<str>
+
+Forum URL (the forum display page).
+
+Usually it's of the form: http://host/path/forumdisplay.php?f=XXX
+
 =back
+
+Return value:
+
+Returns an enveloped result (an array). First element (status) is an integer containing HTTP status code (200 means OK, 4xx caller error, 5xx function error). Second element (msg) is a string containing error message, or 'OK' if status is 200. Third element (result) is optional, the actual result. Fourth element (meta) is called result metadata and is optional, a hash that contains extra information.
 
 =head1 AUTHOR
 
@@ -200,7 +202,7 @@ Steven Haryanto <stevenharyanto@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Steven Haryanto.
+This software is copyright (c) 2012 by Steven Haryanto.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
