@@ -1,25 +1,34 @@
-Revision history for RSS-From-Forum-vBulletin.
+Revision history for RSS-From-Forum-vBulletin
 
-0.05    2012-03-23
+0.06     2014-07-22 (SHARYANTO)
 
-        No functional changes. Replace Sub::Spec::CmdLine with Perinci::CmdLine.
+         - No functional changes.
 
-
-0.04    2011-10-25
-
-        No functional changes. Add missing dep [ct].
+         - Switch CLI scripts from using Perinci::CmdLine to
+           Perinci::CmdLine::Any to reduce size of dependencies.
 
 
-0.03    2011-10-20
+0.05    2012-03-23 (SHARYANTO)
 
-        Parse date.
-
-
-0.02    2011-10-20
-
-        No functional changes. Remove debugging statement.
+        - No functional changes. Replace Sub::Spec::CmdLine with
+          Perinci::CmdLine.
 
 
-0.01    2011-10-20
+0.04    2011-10-25 (SHARYANTO)
 
-        First basic, working release.
+        - No functional changes. Add missing dep [ct].
+
+
+0.03    2011-10-20 (SHARYANTO)
+
+        - Parse date.
+
+
+0.02    2011-10-20 (SHARYANTO)
+
+        - No functional changes. Remove debugging statement.
+
+
+0.01    2011-10-20 (SHARYANTO)
+
+        - First basic, working release.
