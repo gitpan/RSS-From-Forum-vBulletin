@@ -3,9 +3,9 @@ NAME
     display page
 
 VERSION
-    This document describes version 0.06 of RSS::From::Forum::vBulletin
+    This document describes version 0.07 of RSS::From::Forum::vBulletin
     (from Perl distribution RSS-From-Forum-vBulletin), released on
-    2014-07-22.
+    2014-08-16.
 
 SYNOPSIS
      # See get-rss-from-forum for command-line usage

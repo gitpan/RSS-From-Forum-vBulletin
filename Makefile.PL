@@ -28,7 +28,7 @@ my %WriteMakefileArgs = (
     "LWP::UserAgent" => 0,
     "Log::Any" => 0,
     "Mojo::DOM" => 0,
-    "Perinci::CmdLine::Any" => 0,
+    "Perinci::CmdLine::Any" => "0.06",
     "Rinci" => "v1.1.0",
     "URI::URL" => 0
   },
@@ -38,7 +38,7 @@ my %WriteMakefileArgs = (
     "IPC::Open3" => 0,
     "Test::More" => 0
   },
-  "VERSION" => "0.06",
+  "VERSION" => "0.07",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -54,7 +54,7 @@ my %FallbackPrereqs = (
   "LWP::UserAgent" => 0,
   "Log::Any" => 0,
   "Mojo::DOM" => 0,
-  "Perinci::CmdLine::Any" => 0,
+  "Perinci::CmdLine::Any" => "0.06",
   "Rinci" => "v1.1.0",
   "Test::More" => 0,
   "URI::URL" => 0

@@ -1,20 +1,23 @@
 #!perl
 
-# workaround for dzil
-package get_rss_from_forum;
+# Note: This script is a CLI interface to Riap function /RSS/From/Forum/vBulletin/get_rss_from_forum
+# and generated automatically using Dist::Zilla::Plugin::Rinci::ScriptFromFunc version 0.01
 
-our $VERSION = '0.06'; # VERSION
+our $DATE = '2014-08-16'; # DATE
+our $VERSION = '0.07'; # VERSION
 
-use 5.010;
+use 5.010001;
 use strict;
 use warnings;
 
 use Perinci::CmdLine::Any;
-Perinci::CmdLine::Any->new(
-    url => '/RSS/From/Forum/vBulletin/get_rss_from_forum')->run;
 
-1;
-# ABSTRACT: Get RSS from vBulletin forum
+Perinci::CmdLine::Any->new(
+    url => "/RSS/From/Forum/vBulletin/get_rss_from_forum",
+)->run;
+
+# ABSTRACT: Generate an RSS page by parsing vBulletin forum display page
+# PODNAME: get-rss-from-forum
 
 __END__
 
@@ -24,40 +27,35 @@ __END__
 
 =head1 NAME
 
-get_rss_from_forum - Get RSS from vBulletin forum
+get-rss-from-forum - Generate an RSS page by parsing vBulletin forum display page
 
 =head1 VERSION
 
-This document describes version 0.06 of get_rss_from_forum (from Perl distribution RSS-From-Forum-vBulletin), released on 2014-07-22.
+This document describes version 0.07 of get-rss-from-forum (from Perl distribution RSS-From-Forum-vBulletin), released on 2014-08-16.
 
 =head1 SYNOPSIS
 
- $ get_rss_from_vbulletin_forum http://example.com/forum/forumdisplay.php?f=9
- <?xml version="1.0" encoding="UTF-8"?>
- <!-- generator="RSS::From::Forum::vBulletin 0.01 (Perl module)" -->
- <rss version="2.0">
-   <channel>
-     <title>...</title>
-     <link>http://example.com/forum/forumdisplay.php?f=9#rss</link>
-     <generator>...</generator>
+Usage:
 
-     <item>
-       <title>...</title>
-       <link>http://example.com/forum/showthread.php?t=14445</link>
-       <pubDate>...</pubDate>
-       <description>...</description>
-     </item>
-     ...
+ % get-rss-from-forum
 
-   </channel>
- </rss>
+Examples:
+
+ TODO
+
+To see all options:
+
+ % get-rss-from-forum --help
 
 =head1 DESCRIPTION
 
-See L<RSS::From::Forum::vBulletin> for more details, including available
-options.
+Many vBulletin forums do not turn on RSS feeds. This function parses vBulletin
+forum display page and create a simple RSS page so you can subscribe to it using
+RSS.
 
-=head1 SEE ALSO
+=head1 OPTIONS
+
+ TODO
 
 =head1 HOMEPAGE
 

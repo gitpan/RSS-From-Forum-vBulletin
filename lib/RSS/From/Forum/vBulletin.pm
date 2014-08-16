@@ -14,7 +14,7 @@ use URI::URL;
 use Exporter::Lite;
 our @EXPORT_OK = qw(get_rss_from_forum);
 
-our $VERSION = '0.06'; # VERSION
+our $VERSION = '0.07'; # VERSION
 
 our %SPEC;
 
@@ -158,7 +158,7 @@ RSS::From::Forum::vBulletin - Get RSS page by parsing vBulletin forum display pa
 
 =head1 VERSION
 
-This document describes version 0.06 of RSS::From::Forum::vBulletin (from Perl distribution RSS-From-Forum-vBulletin), released on 2014-07-22.
+This document describes version 0.07 of RSS::From::Forum::vBulletin (from Perl distribution RSS-From-Forum-vBulletin), released on 2014-08-16.
 
 =head1 SYNOPSIS
 
